@@ -1,0 +1,17 @@
+// Write your JS code here
+
+import './index.css'
+
+
+const BlogItem = (props) => (
+    
+  return(
+      <div>
+    <h1>sachin</h1>
+  </div>
+  )
+)
+
+export default BlogItem
+
+
