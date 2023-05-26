@@ -1,5 +1,4 @@
 import './index.css'
-import BlogItem from '../BlogItem'
 
 const blogsList = [
   {
@@ -37,13 +36,30 @@ const blogsList = [
 ]
 const Home = () => (
   <div className="home-container">
+    <div className="pro-img">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/profile-img.png"
+        alt="profile"
+      />
+      <h1>Wade Warren</h1>
+      <p>Sofware developer at UK</p>
+    </div>
     {blogsList.map(eachtrasa => (
-      <BlogItem key={eachtrasa.id} transactionDetails={eachtrasa} />
+      <div className="man-box">
+        <div className="data">
+          <h1>{eachtrasa.title}</h1>
+          <p>{eachtrasa.publishedDate}</p>
+        </div>
+        <p>{eachtrasa.description}</p>
+      </div>
     ))}
   </div>
 )
 
 export default Home
+
+
+
 
 
 
@@ -55,4 +71,22 @@ export default Home
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+.man-box {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border: 1px solid #cbd5e1;
+  margin: 12px;
+  padding: 5px;
+}
+.pro-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
